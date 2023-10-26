@@ -1,6 +1,9 @@
 interface camera{
     public void takeSnap();
     public void recordVideos();
+    default void recordIn4k(){
+        System.out.println("Recording in 4k");
+    }
 }
 interface Wifi{
     String[] getNetworks();
@@ -45,6 +48,8 @@ public class Interfaces1 {
             ms.pickCall();
         System.out.println();
             ms.callNumber(1038);
+        System.out.println();
+        ms.recordIn4k();
 
     }
 }
